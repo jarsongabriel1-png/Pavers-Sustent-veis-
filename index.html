@@ -3,99 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CajuPaver — projeto de pavers sustentáveis a partir da casca da castanha de caju.">
-<title>CajuPaver | Ciência que transforma resíduos</title>
+<meta name="description" content="Pavers Sustentáveis — projeto escolar de ciência, inovação e sustentabilidade a partir da casca da castanha de caju.">
+<title>Pavers Sustentáveis | Ciência que transforma resíduos</title>
 <style>
 :root{
  --bg:#f7faf7;--surface:#fff;--surface2:#edf6ef;--green:#176b43;--green2:#278458;
  --dark:#102d20;--text:#385247;--muted:#708078;--gold:#d39a3b;--line:#dce9df;
- --shadow:0 18px 50px rgba(16,45,32,.10);--radius:24px;
+ --shadow:0 18px 50px rgba(16,45,32,.10);--radius:24px
 }
 *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
 body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
 a{text-decoration:none;color:inherit}.container{width:min(1160px,calc(100% - 40px));margin:auto}
-header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(220,233,223,.8)}
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(220,233,223,.8)}
 .nav{height:76px;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--dark);font-size:1.25rem}
-.brand-mark{width:39px;height:39px;border-radius:12px;background:var(--green);display:grid;place-items:center;color:#fff}
-.brand em{font-style:normal;color:var(--green2)}
-.menu{display:flex;gap:25px;font-size:.92rem;font-weight:700;color:#41584d}
-.menu a:hover{color:var(--green)}
-.cta-small{padding:10px 16px;background:var(--green);color:#fff!important;border-radius:10px}
-.hero{padding:155px 0 90px;background:
- radial-gradient(circle at 85% 25%,#d9efdf 0,transparent 28%),
- linear-gradient(135deg,#f3faf4,#fffaf0)}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:65px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#e0f1e5;color:var(--green);border:1px solid #cde5d3;padding:7px 12px;border-radius:99px;font-size:.82rem;font-weight:800}
-h1{font-size:clamp(3rem,7vw,5.7rem);line-height:.98;letter-spacing:-.055em;color:var(--dark);margin:20px 0}
-.hero h1 span{color:var(--green)}
-.hero-copy{font-size:1.12rem;max-width:680px;color:#53665d}
-.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 18px;border-radius:12px;font-weight:800}
-.btn-primary{background:var(--green);color:#fff;box-shadow:0 10px 24px rgba(23,107,67,.2)}
-.btn-secondary{border:1px solid var(--line);background:#fff;color:var(--dark)}
-.hero-card{background:rgba(255,255,255,.78);border:1px solid #dcebe0;border-radius:32px;padding:28px;box-shadow:var(--shadow)}
-.mock{height:350px;border-radius:24px;background:linear-gradient(145deg,#c0beb2,#77766e);position:relative;overflow:hidden;display:grid;place-items:center}
-.mock:before{content:"";position:absolute;inset:20px;border:1px solid rgba(255,255,255,.3);border-radius:20px}
-.paver-shape{width:230px;height:145px;background:linear-gradient(145deg,#aaa99e,#707068);clip-path:polygon(10% 0,90% 0,100% 15%,100% 85%,90% 100%,10% 100%,0 85%,0 15%);display:grid;place-items:center;color:#fff;font-weight:900;letter-spacing:2px;transform:rotate(-8deg);box-shadow:0 30px 30px rgba(0,0,0,.25)}
-.mock-label{position:absolute;bottom:20px;left:20px;background:rgba(16,45,32,.8);color:#fff;padding:9px 12px;border-radius:10px;font-size:.78rem}
-section{padding:90px 0}
-.section-head{max-width:760px;margin-bottom:42px}
-.center{margin-left:auto;margin-right:auto;text-align:center}
-.kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.15em;color:var(--green);font-weight:900}
-h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;letter-spacing:-.035em;color:var(--dark);margin:9px 0 14px}
-.section-head p{color:var(--muted);font-size:1.05rem}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:27px;box-shadow:0 8px 30px rgba(16,45,32,.045)}
-.card .number{font-size:.78rem;color:var(--green);font-weight:900}
-.card h3{margin:10px 0 8px;color:var(--dark);font-size:1.2rem}.card p{color:var(--muted)}
-.iconbox{width:46px;height:46px;border-radius:14px;background:var(--surface2);display:grid;place-items:center;font-size:1.35rem;margin-bottom:14px}
-.problem{background:var(--dark);color:#dce9df}
-.problem h2{color:#fff}.problem .section-head p{color:#b8c9bf}
-.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:stretch}
-.problem-card{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);border-radius:25px;padding:30px}
-.problem-card p{color:#c4d2ca}
-.process{background:var(--surface2)}
-.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-.step{background:#fff;border:1px solid var(--line);padding:22px;border-radius:20px;position:relative}
-.step-num{width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:900;font-size:.85rem}
-.step h3{margin:13px 0 6px;color:var(--dark);font-size:1rem}.step p{font-size:.9rem;color:var(--muted)}
-.traços{display:grid;grid-template-columns:1fr 1.1fr;gap:30px;align-items:start}
-.table-wrap{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
-table{width:100%;border-collapse:collapse}th,td{padding:15px 16px;text-align:left;border-bottom:1px solid var(--line)}th{background:var(--surface2);color:var(--dark);font-size:.84rem}td{font-size:.9rem}tr:last-child td{border-bottom:0}
-.note{margin-top:15px;color:var(--muted);font-size:.84rem}
-.results{background:linear-gradient(135deg,#f3faf4,#fff)}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:25px}
-.stat{background:#fff;border:1px solid var(--line);border-radius:20px;padding:25px}.stat strong{display:block;font-size:2.5rem;line-height:1;color:var(--green)}.stat span{display:block;margin-top:8px;color:var(--muted)}
-.quote{margin-top:25px;background:#fff;border-left:4px solid var(--gold);padding:22px 25px;border-radius:0 18px 18px 0;color:#52645b}
-.parvito{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:center}
-.parvito-art{min-height:390px;border-radius:32px;background:linear-gradient(145deg,#e2f2e6,#fff5db);display:grid;place-items:center;border:1px solid var(--line);position:relative;overflow:hidden}
-.bot{width:190px;height:190px;border-radius:45px;background:#fff;border:7px solid var(--green);box-shadow:0 22px 45px rgba(16,45,32,.15);display:grid;place-items:center;font-size:5rem;position:relative}
-.bot:before,.bot:after{content:"";position:absolute;top:-32px;width:7px;height:35px;background:var(--green);border-radius:8px}.bot:before{left:42px}.bot:after{right:42px}
-.bubble{position:absolute;top:28px;right:25px;background:#fff;padding:11px 14px;border-radius:15px;box-shadow:0 8px 25px #0001;font-weight:800;color:var(--green);font-size:.8rem}
-.timeline{display:grid;gap:12px;margin-top:25px}.time{display:grid;grid-template-columns:95px 1fr;gap:15px;align-items:start}.time b{color:var(--green)}.time div{border-bottom:1px solid var(--line);padding-bottom:12px}
-.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:180px;gap:14px}.photo{border-radius:20px;background:linear-gradient(135deg,#dfe9e1,#c5d3c9);display:grid;place-items:center;color:#527064;font-weight:800;border:1px solid var(--line);text-align:center;padding:20px}.photo:first-child{grid-row:span 2}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--dark);font-size:1.2rem}.brand-mark{width:39px;height:39px;border-radius:12px;background:var(--green);display:grid;place-items:center;color:#fff}.brand em{font-style:normal;color:var(--green2)}
+.menu{display:flex;gap:17px;font-size:.83rem;font-weight:800;color:#41584d;align-items:center}.menu a:hover{color:var(--green)}.cta-small{padding:10px 14px;background:var(--green);color:#fff!important;border-radius:10px}
+.hero{padding:155px 0 90px;background:radial-gradient(circle at 85% 25%,#d9efdf 0,transparent 28%),linear-gradient(135deg,#f3faf4,#fffaf0)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:65px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#e0f1e5;color:var(--green);border:1px solid #cde5d3;padding:7px 12px;border-radius:99px;font-size:.82rem;font-weight:800}
+h1{font-size:clamp(3rem,7vw,5.7rem);line-height:.98;letter-spacing:-.055em;color:var(--dark);margin:20px 0}.hero h1 span{color:var(--green)}.hero-copy{font-size:1.12rem;max-width:680px;color:#53665d}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 18px;border-radius:12px;font-weight:800;cursor:pointer;border:0}.btn-primary{background:var(--green);color:#fff;box-shadow:0 10px 24px rgba(23,107,67,.2)}.btn-secondary{border:1px solid var(--line);background:#fff;color:var(--dark)}
+.hero-card{background:rgba(255,255,255,.78);border:1px solid #dcebe0;border-radius:32px;padding:18px;box-shadow:var(--shadow)}.hero-photo{width:100%;height:390px;object-fit:cover;border-radius:24px;display:block}.mock-label{margin:12px 5px 2px;display:block;color:var(--muted);font-size:.8rem;font-weight:700}
+section{padding:90px 0}.section-head{max-width:800px;margin-bottom:42px}.center{margin-left:auto;margin-right:auto;text-align:center}.kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.15em;color:var(--green);font-weight:900}h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;letter-spacing:-.035em;color:var(--dark);margin:9px 0 14px}.section-head p{color:var(--muted);font-size:1.05rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:27px;box-shadow:0 8px 30px rgba(16,45,32,.045)}.card h3{margin:10px 0 8px;color:var(--dark);font-size:1.2rem}.card p{color:var(--muted)}.iconbox{width:46px;height:46px;border-radius:14px;background:var(--surface2);display:grid;place-items:center;font-size:1.35rem;margin-bottom:14px}
+.problem{background:var(--dark);color:#dce9df}.problem h2{color:#fff}.problem .section-head p{color:#b8c9bf}.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:stretch}.problem-card{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);border-radius:25px;padding:30px}.problem-card p{color:#c4d2ca}.problem-card h3{color:#fff;margin-bottom:12px}
+.process{background:var(--surface2)}.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{background:#fff;border:1px solid var(--line);padding:22px;border-radius:20px;position:relative}.step-num{width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:900;font-size:.85rem}.step h3{margin:13px 0 6px;color:var(--dark);font-size:1rem}.step p{font-size:.9rem;color:var(--muted)}
+.traços{display:grid;grid-template-columns:1fr 1.1fr;gap:30px;align-items:start}.table-wrap{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}table{width:100%;border-collapse:collapse}th,td{padding:15px 16px;text-align:left;border-bottom:1px solid var(--line)}th{background:var(--surface2);color:var(--dark);font-size:.84rem}td{font-size:.9rem}tr:last-child td{border-bottom:0}.selected{background:#e9f6ed!important}.badge{display:inline-block;margin-top:7px;padding:4px 8px;border-radius:999px;background:#d8efdf;color:var(--green);font-size:.72rem;font-weight:900}
+.note{margin-top:15px;color:var(--muted);font-size:.84rem}.quote{margin-top:25px;background:#fff;border-left:4px solid var(--gold);padding:22px 25px;border-radius:0 18px 18px 0;color:#52645b}
+.results{background:linear-gradient(135deg,#f3faf4,#fff)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:25px}.stat{background:#fff;border:1px solid var(--line);border-radius:20px;padding:25px}.stat strong{display:block;font-size:2.5rem;line-height:1;color:var(--green)}.stat span{display:block;margin-top:8px;color:var(--muted)}
+.timeline{display:grid;gap:12px;margin-top:25px}.time{display:grid;grid-template-columns:95px 1fr;gap:15px;align-items:start}.time b{color:var(--green)}.time div{border-bottom:1px solid var(--line);padding-bottom:12px}.time strong{color:var(--dark)}
+.image-section{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px;align-items:center}.feature-img{width:100%;max-height:620px;object-fit:cover;border-radius:26px;border:1px solid var(--line);box-shadow:var(--shadow);display:block}.caption{font-size:.82rem;color:var(--muted);margin-top:10px;text-align:center}.law{background:#f2f7ee}.law-copy{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px}.law-copy ul{padding-left:20px;color:var(--muted)}.law-copy li+li{margin-top:7px}
+.benefit{border-top:4px solid var(--green)}.benefit h3{font-size:1.25rem}.benefit ul{padding-left:20px;color:var(--muted);margin-top:14px}.benefit li+li{margin-top:8px}.metric{display:flex;gap:12px;align-items:baseline;margin-top:20px}.metric strong{font-size:2.2rem;color:var(--green)}.metric span{color:var(--muted);font-size:.84rem}
+.ods{background:#fff}.ods-card{position:relative;overflow:hidden}.ods-number{font-size:3.2rem;font-weight:950;color:var(--green);line-height:1}.ods-card small{display:block;text-transform:uppercase;letter-spacing:.1em;font-weight:900;color:var(--muted);margin-top:6px}.ods-source{margin-top:28px;color:var(--muted);font-size:.82rem}.ods-source a{color:var(--green);font-weight:800}
+.abnt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.norm{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px}.norm strong{font-size:1.05rem;color:var(--green)}.norm h3{margin:8px 0;color:var(--dark);font-size:1.05rem}.norm p{color:var(--muted);font-size:.9rem}
+.parvito{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:center}.parvito-art{min-height:390px;border-radius:32px;background:linear-gradient(145deg,#e2f2e6,#fff5db);display:grid;place-items:center;border:1px solid var(--line);position:relative;overflow:hidden}.bot{width:190px;height:190px;border-radius:45px;background:#fff;border:7px solid var(--green);box-shadow:0 22px 45px rgba(16,45,32,.15);display:grid;place-items:center;font-size:5rem;position:relative}.bot:before,.bot:after{content:"";position:absolute;top:-32px;width:7px;height:35px;background:var(--green);border-radius:8px}.bot:before{left:42px}.bot:after{right:42px}.bubble{position:absolute;top:28px;right:25px;background:#fff;padding:11px 14px;border-radius:15px;box-shadow:0 8px 25px #0001;font-weight:800;color:var(--green);font-size:.8rem}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:180px;gap:14px}.photo{border-radius:20px;background:linear-gradient(135deg,#dfe9e1,#c5d3c9);display:grid;place-items:center;color:#527064;font-weight:800;border:1px solid var(--line);text-align:center;padding:20px;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover}.photo:first-child{grid-row:span 2}
+.tintura-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px}.tintura-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.warning{margin-top:18px;background:#fff8e8;border:1px solid #f0ddb1;border-radius:18px;padding:18px;color:#69582e;font-size:.9rem}
+.explore{background:var(--surface2)}.explore-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.explore a{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;font-weight:900;color:var(--dark);transition:.2s}.explore a:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.explore span{display:block;color:var(--muted);font-size:.86rem;font-weight:500;margin-top:6px}
 .contact{background:var(--green);color:#fff;border-radius:30px;padding:45px;display:flex;justify-content:space-between;align-items:center;gap:30px}.contact h2{color:#fff}.contact p{color:#d8eadf}.contact .btn{background:#fff;color:var(--green)}
 footer{padding:40px 0;background:#0c2419;color:#a9bdb2}.footer-grid{display:flex;justify-content:space-between;gap:20px}.footer-brand{color:#fff;font-weight:900}.copyright{font-size:.84rem;margin-top:25px;border-top:1px solid rgba(255,255,255,.1);padding-top:20px}
 .reveal{animation:up .7s ease both}@keyframes up{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
-@media(max-width:900px){
- .menu{display:none}.hero-grid,.problem-grid,.traços,.parvito{grid-template-columns:1fr}
- .grid3{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr 1fr}
- .gallery{grid-template-columns:1fr 1fr}.photo:first-child{grid-row:span 1}
-}
-@media(max-width:560px){
- .container{width:min(100% - 28px,1160px)}.hero{padding-top:125px}.hero-card{padding:15px}.mock{height:270px}
- section{padding:65px 0}.steps,.stats{grid-template-columns:1fr}.contact{padding:30px;display:block}.contact .btn{margin-top:18px}
- .footer-grid{display:block}.footer-grid>*+*{margin-top:10px}
-}
+@media(max-width:1000px){.menu{gap:10px;font-size:.75rem}.grid4,.abnt-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.menu{display:none}.hero-grid,.problem-grid,.traços,.parvito,.image-section,.tintura-grid{grid-template-columns:1fr}.grid3,.explore-grid{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.photo:first-child{grid-row:span 1}.hero-photo{height:360px}}
+@media(max-width:560px){.container{width:min(100% - 28px,1160px)}.hero{padding-top:125px}.hero-photo{height:300px}section{padding:65px 0}.steps,.stats,.grid4,.abnt-grid{grid-template-columns:1fr}.contact{padding:30px;display:block}.contact .btn{margin-top:18px}.footer-grid{display:block}.footer-grid>*+*{margin-top:10px}.time{grid-template-columns:78px 1fr}.table-wrap{overflow-x:auto}table{min-width:620px}}
 </style>
 </head>
 <body>
 <header>
  <div class="container nav">
-  <a class="brand" href="#inicio"><span class="brand-mark">🌱</span>Caju<em>Paver</em></a>
+  <a class="brand" href="#inicio"><span class="brand-mark">🌱</span>Pavers <em>Sustentáveis</em></a>
   <nav class="menu">
-   <a href="#ideia">A ideia</a><a href="#processo">Processo</a><a href="#resultados">Resultados</a><a href="#parvito">Parvito</a><a class="cta-small" href="#jornada">Nossa jornada</a>
+   <a href="#ideia">A ideia</a><a href="#processo">Processo</a><a href="#resultados">Resultados</a><a href="#beneficios">Benefícios</a><a href="#ods">ODS</a><a href="#normas">ABNT</a><a href="#parvito">Parvito</a><a class="cta-small" href="#explorar">Explorar</a>
   </nav>
  </div>
 </header>
@@ -105,31 +62,33 @@ footer{padding:40px 0;background:#0c2419;color:#a9bdb2}.footer-grid{display:flex
  <div class="container hero-grid">
   <div class="reveal">
    <span class="eyebrow">♻️ Ciência • Inovação • Sustentabilidade</span>
-   <h1>Transformar um <span>resíduo</span> em possibilidade.</h1>
-   <p class="hero-copy">O CajuPaver investiga o aproveitamento da casca da castanha de caju na produção de pavers, unindo pesquisa, experimentação e uma solução pensada para a nossa comunidade.</p>
+   <h1>Boas-vindas ao nosso <span>projeto</span>.</h1>
+   <p class="hero-copy">O <strong>Pavers Sustentáveis</strong> investiga o aproveitamento da casca da castanha de caju na produção de pavers, unindo pesquisa, experimentação e uma proposta pensada para a nossa escola e para o futuro da nossa região.</p>
    <div class="buttons"><a class="btn btn-primary" href="#ideia">Conheça o projeto ↓</a><a class="btn btn-secondary" href="#processo">Ver o processo</a></div>
   </div>
   <div class="hero-card reveal">
-   <div class="mock"><div class="paver-shape">CAJUPAVER</div><span class="mock-label">Protótipo • projeto em desenvolvimento</span></div>
+   <img class="hero-photo" src="1000727625.jpg" alt="Protótipos de pavers desenvolvidos pela equipe">
+   <span class="mock-label">Protótipos • projeto em desenvolvimento</span>
   </div>
  </div>
 </section>
 
 <section id="ideia">
  <div class="container">
-  <div class="section-head center"><span class="kicker">Por que existe?</span><h2>Uma pergunta simples deu início à pesquisa.</h2><p>O que poderia acontecer se uma parte desse resíduo ganhasse uma nova função?</p></div>
-  <div class="grid3">
+  <div class="section-head center"><span class="kicker">Por que existe?</span><h2>Uma pergunta simples deu início à pesquisa.</h2><p>O que poderia acontecer se uma parte desse resíduo ganhasse uma nova função — na escola e, no futuro, em outros espaços da nossa região?</p></div>
+  <div class="grid4">
    <article class="card"><div class="iconbox">♻️</div><h3>Reaproveitar</h3><p>Dar novo destino à casca da castanha de caju que seria descartada, investigando seu uso como parte do paver.</p></article>
    <article class="card"><div class="iconbox">🔬</div><h3>Investigar</h3><p>Testar materiais, traços e porcentagens diferentes, observando o comportamento de cada protótipo.</p></article>
-   <article class="card"><div class="iconbox">🏫</div><h3>Aplicar</h3><p>Levar o aprendizado dos testes para uma aplicação concreta no espaço da escola.</p></article>
+   <article class="card"><div class="iconbox">🔄</div><h3>Transformar</h3><p>Levar o aprendizado dos testes para aplicações futuras em calçadas, praças e outros espaços.</p></article>
+   <article class="card"><div class="iconbox">🌱</div><h3>Valorizar nossa região</h3><p>Relacionar ciência e sustentabilidade a uma cultura e a uma cadeia produtiva importante para a região.</p></article>
   </div>
  </div>
 </section>
 
 <section class="problem">
  <div class="container problem-grid">
-  <div class="section-head"><span class="kicker" style="color:#8bd1a5">O problema</span><h2>Quando um resíduo não encontra um novo destino, ele também pode virar um desafio.</h2><p>O projeto parte da realidade da cadeia de beneficiamento da castanha de caju e procura uma possibilidade de valorização desse material.</p></div>
-  <div class="problem-card"><h3>Da pesquisa para a prática</h3><p>Em vez de olhar para a casca apenas como descarte, a equipe passou a investigar suas características e sua possível utilização na construção de pavers.</p><br><p><strong>Nosso foco:</strong> aprender com dados, protótipos e ensaios — e não apenas com uma ideia no papel.</p></div>
+  <div class="section-head"><span class="kicker" style="color:#8bd1a5">O problema</span><h2>Quando um resíduo também traz desafios, buscar um novo destino faz parte da solução.</h2><p>A casca da castanha contém o líquido da casca da castanha (LCC/CNSL), uma mistura rica em compostos fenólicos, como ácido anacárdico, cardanol e cardol. A composição varia conforme a origem e o processamento.</p></div>
+  <div class="problem-card"><h3>Por que isso importa?</h3><p>O LCC natural possui características irritantes e cáusticas, por isso seus componentes exigem cuidado no manuseio e processamento. Isso reforça a importância de estudar formas responsáveis de valorização desse resíduo.</p><br><p><strong>Nosso desafio:</strong> investigar como um material ligado ao descarte da cadeia da castanha pode ganhar uma nova função, sem deixar de considerar segurança, testes e responsabilidade ambiental.</p></div>
  </div>
 </section>
 
@@ -138,7 +97,7 @@ footer{padding:40px 0;background:#0c2419;color:#a9bdb2}.footer-grid{display:flex
   <div class="section-head"><span class="kicker">Método</span><h2>Do resíduo ao protótipo</h2><p>O desenvolvimento acontece em etapas, com registros e ajustes ao longo da investigação.</p></div>
   <div class="steps">
    <article class="step"><div class="step-num">1</div><h3>Coleta</h3><p>Coleta e separação do material de descarte.</p></article>
-   <article class="step"><div class="step-num">2</div><h3>Preparação</h3><p>Trituração e peneiramento para uniformizar o material.</p></article>
+   <article class="step"><div class="step-num">2</div><h3>Preparação</h3><p>Peneiramento e organização para uniformizar o material; a trituração pode ser usada quando necessária.</p></article>
    <article class="step"><div class="step-num">3</div><h3>Traços</h3><p>Testes com diferentes porcentagens de casca.</p></article>
    <article class="step"><div class="step-num">4</div><h3>Moldagem</h3><p>Produção dos pavers e preparação para a cura.</p></article>
    <article class="step"><div class="step-num">5</div><h3>Ensaios</h3><p>Cura e avaliação do comportamento dos protótipos.</p></article>
@@ -146,38 +105,105 @@ footer{padding:40px 0;background:#0c2419;color:#a9bdb2}.footer-grid{display:flex
  </div>
 </section>
 
-<section>
+<section id="experimentacao">
  <div class="container traços">
   <div class="section-head"><span class="kicker">Experimentação</span><h2>Comparar para aprender.</h2><p>Os diferentes traços ajudam a equipe a observar como a porcentagem de casca interfere no comportamento da mistura.</p><div class="quote">Os valores abaixo representam registros de trabalho do projeto e podem ser atualizados conforme novos ensaios forem realizados.</div></div>
   <div class="table-wrap">
    <table><thead><tr><th>Traço experimental</th><th>Casca de caju</th><th>Observação</th></tr></thead>
    <tbody><tr><td>Traço 1</td><td>5%</td><td>Boa coesão no protótipo testado</td></tr>
    <tr><td>Traço 2</td><td>10%</td><td>Mistura trabalhável, com maior atenção à porosidade</td></tr>
-   <tr><td>Outros testes</td><td>15%+</td><td>Em investigação pela equipe</td></tr></tbody></table>
+   <tr class="selected"><td><strong>Traço escolhido</strong></td><td><strong>15%</strong><br><span class="badge">Versão atual</span></td><td>Percentual definido para a versão atual do projeto, mantendo a resistência necessária conforme os testes realizados.</td></tr></tbody></table>
   </div>
+ </div>
+</section>
+
+<section id="prototipos" class="process">
+ <div class="container image-section">
+  <div><span class="kicker">Nossos protótipos</span><h2>Da pesquisa para algo que podemos tocar.</h2><p>Os protótipos fazem parte da etapa experimental e ajudam a equipe a comparar misturas, observar o comportamento do material e decidir os próximos passos.</p><div class="quote">Protótipos desenvolvidos com <strong>15% de casca de castanha de caju</strong>.</div></div>
+  <figure><img class="feature-img" src="1000727625.jpg" alt="Protótipos de pavers sustentáveis desenvolvidos pela equipe"><figcaption class="caption">Protótipos desenvolvidos com 15% de casca de castanha de caju.</figcaption></figure>
  </div>
 </section>
 
 <section id="resultados" class="results">
  <div class="container">
-  <div class="section-head center"><span class="kicker">Até aqui</span><h2>O projeto está saindo do papel.</h2><p>Os protótipos já passaram por etapas de teste e a equipe está avançando para uma aplicação na escola.</p></div>
+  <div class="section-head center"><span class="kicker">Resultados atuais</span><h2>O projeto já saiu do papel — e continua evoluindo.</h2><p>Os primeiros protótipos já passaram por etapas de produção e ensaios. Os resultados registrados até aqui servem como base para os próximos aprimoramentos.</p></div>
   <div class="stats">
-   <div class="stat"><strong>19 t</strong><span>valor de compressão informado pela equipe para um dos resultados registrados.</span></div>
-   <div class="stat"><strong>5%+</strong><span>diferentes porcentagens de casca estão sendo investigadas nos traços.</span></div>
-   <div class="stat"><strong>10×20×6</strong><span>dimensão do protótipo retangular atualmente registrada, em centímetros.</span></div>
+   <div class="stat"><strong>19,8 t</strong><span>Resultado de compressão informado pela equipe em um dos ensaios registrados.</span></div>
+   <div class="stat"><strong>9,4 MPa</strong><span>Resistência à compressão informada pela equipe no resultado registrado.</span></div>
+   <div class="stat"><strong>10×20×6 cm</strong><span>Dimensões definidas para os pavers da próxima etapa de produção.</span></div>
   </div>
-  <div class="quote">⚠️ <strong>Nota técnica:</strong> resultados de ensaios devem ser apresentados com unidade, método, condições e identificação do corpo de prova para permitir uma interpretação adequada.</div>
+  <div class="quote">⚠️ <strong>Projeto em evolução:</strong> os resultados apresentados são registros da equipe. A interpretação técnica depende do método, das condições do ensaio, do corpo de prova e da norma utilizada. Novos resultados serão acrescentados conforme a pesquisa avançar.</div>
+ </div>
+</section>
+
+<section id="beneficios">
+ <div class="container">
+  <div class="section-head center"><span class="kicker">Benefícios e vantagens</span><h2>O que nosso paver busca transformar.</h2><p>O projeto reúne uma proposta ambiental, econômica, social e técnica. Alguns benefícios ainda são potenciais e dependem de novos testes e da aplicação em escala real.</p></div>
+  <div class="grid3">
+   <article class="card benefit"><div class="iconbox">🌱</div><h3>Benefício ambiental</h3><ul><li>Dá uma nova destinação à casca da castanha que seria descartada.</li><li>Busca reduzir o descarte inadequado e a queima do resíduo.</li><li>Transforma um resíduo em recurso dentro de uma proposta de economia circular.</li><li>Contribui para discussões ligadas ao ODS 12.</li></ul></article>
+   <article class="card benefit"><div class="iconbox">💰</div><h3>Vantagem econômica</h3><ul><li>Utiliza uma matéria-prima ligada à cadeia produtiva da nossa região.</li><li>O custo experimental informado pela equipe foi de R$ 0,57 por paver, comparado a uma referência de R$ 1,80.</li><li>Essa comparação representa uma estimativa do projeto e pode mudar conforme escala, materiais e produção.</li><li>Pode contribuir para novas oportunidades de valorização do resíduo e renda.</li></ul><div class="metric"><strong>68%</strong><span>redução calculada entre R$ 0,57 e R$ 1,80.</span></div></article>
+   <article class="card benefit"><div class="iconbox">🧱</div><h3>Vantagem social e técnica</h3><ul><li>Projeto desenvolvido por alunos da EREM Gil Rodrigues para a comunidade.</li><li>Investiga uma aplicação em calçadas, praças e outros espaços.</li><li>Estimula ciência, inovação e aprendizagem prática.</li><li>Os ensaios registrados pela equipe incluem 19,8 t e 9,4 MPa; a adequação final deve ser avaliada conforme a norma e a aplicação pretendida.</li></ul></article>
+  </div>
  </div>
 </section>
 
 <section id="jornada">
  <div class="container">
-  <div class="section-head"><span class="kicker">Próximos passos</span><h2>O que vem agora?</h2><p>A próxima etapa aproxima ainda mais a pesquisa da comunidade escolar.</p></div>
+  <div class="section-head"><span class="kicker">Próximos passos</span><h2>Da pesquisa para a nossa comunidade.</h2><p>Agora, o projeto entra em uma nova etapa: transformar o que aprendemos nos testes em uma aplicação real e ampliar essa experiência para além da escola.</p></div>
   <div class="timeline">
-   <div class="time"><b>ETAPA 01</b><div><strong>Medir a área</strong><br><span>Levantar as dimensões do espaço destinado à futura calçada.</span></div></div>
-   <div class="time"><b>ETAPA 02</b><div><strong>Produzir os pavers</strong><br><span>Organizar materiais e quantidade necessária para a aplicação.</span></div></div>
-   <div class="time"><b>ETAPA 03</b><div><strong>Aplicar na escola</strong><br><span>Construir a calçada planejada e acompanhar o resultado.</span></div></div>
-   <div class="time"><b>ETAPA 04</b><div><strong>Continuar investigando</strong><br><span>Registrar resultados, dificuldades e aprendizados para melhorar o projeto.</span></div></div>
+   <div class="time"><b>ETAPA 01</b><div><strong>Produzir os pavers</strong><br><span>Organizar materiais e produzir a quantidade necessária para a futura calçada da escola.</span></div></div>
+   <div class="time"><b>ETAPA 02</b><div><strong>Continuar pesquisando</strong><br><span>Ampliar os testes, registrar resultados e buscar novas informações para aperfeiçoar o projeto.</span></div></div>
+   <div class="time"><b>ETAPA 03</b><div><strong>Socializar o conhecimento</strong><br><span>Apresentar a pesquisa à comunidade escolar e compartilhar o aprendizado sempre que possível.</span></div></div>
+   <div class="time"><b>ETAPA 04</b><div><strong>Valorizar a cadeia da castanha</strong><br><span>Buscar caminhos para colocar nossa proposta de valorização da cultura da castanha em prática em localidades da região.</span></div></div>
+   <div class="time"><b>ETAPA 05</b><div><strong>Construir uma economia circular</strong><br><span>Investigar como um resíduo da cadeia da castanha pode ganhar novas funções e oportunidades.</span></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="lei" class="law">
+ <div class="container image-section">
+  <figure><img class="feature-img" src="1000727649.jpg" alt="Material visual do projeto de lei sobre valorização da cadeia produtiva da castanha de caju"><figcaption class="caption">Proposta de Projeto de Lei elaborada pela equipe.</figcaption></figure>
+  <div>
+   <span class="kicker">Nossa proposta</span><h2>Projeto de Lei: valorizar a cultura da castanha.</h2>
+   <div class="law-copy"><p>A equipe elaborou uma proposta de <strong>Projeto de Lei de Valorização da Cadeia Produtiva da Castanha de Caju</strong>, pensando em como a ciência desenvolvida na escola pode dialogar com as necessidades da nossa região.</p><br>
+   <ul><li>Valorizar agricultores, produtores e trabalhadores da cadeia produtiva.</li><li>Incentivar o aproveitamento sustentável dos resíduos.</li><li>Apoiar pesquisa, ciência, inovação e novos produtos, como pavers sustentáveis.</li><li>Estimular educação ambiental e participação das escolas.</li><li>Fortalecer possibilidades de geração de renda e valorização da produção local.</li><li>Buscar caminhos para que a proposta possa ser discutida e, futuramente, colocada em funcionamento em algumas localidades da região.</li></ul></div>
+   <div class="quote">📌 <strong>Importante:</strong> esta é uma proposta elaborada pela equipe. A intenção é buscar diálogo e caminhos institucionais para sua possível implementação; ela não é apresentada aqui como uma lei já aprovada.</div>
+  </div>
+ </div>
+</section>
+
+<section id="ods" class="ods">
+ <div class="container">
+  <div class="section-head center"><span class="kicker">Agenda 2030</span><h2>Nosso projeto e os ODS da ONU.</h2><p>O Pavers Sustentáveis se relaciona principalmente com quatro Objetivos de Desenvolvimento Sustentável da Agenda 2030.</p></div>
+  <div class="grid4">
+   <article class="card ods-card"><div class="ods-number">09</div><small>Indústria, inovação e infraestrutura</small><h3>ODS 9</h3><p>Relaciona-se à pesquisa, à inovação e ao desenvolvimento de uma alternativa de material para a construção.</p></article>
+   <article class="card ods-card"><div class="ods-number">11</div><small>Cidades e comunidades sustentáveis</small><h3>ODS 11</h3><p>Relaciona-se à possibilidade de aplicação dos pavers em calçadas, praças e outros espaços da comunidade.</p></article>
+   <article class="card ods-card"><div class="ods-number">12</div><small>Consumo e produção responsáveis</small><h3>ODS 12</h3><p>É uma relação central: transformar um resíduo da cadeia da castanha em matéria-prima para uma nova possibilidade de uso.</p></article>
+   <article class="card ods-card"><div class="ods-number">13</div><small>Ação contra a mudança global do clima</small><h3>ODS 13</h3><p>Relaciona-se à busca por práticas e soluções que considerem os impactos ambientais e a sustentabilidade.</p></article>
+  </div>
+  <div class="ods-source">Os títulos e objetivos gerais seguem a <a href="https://brasil.un.org/pt-br/sdgs" target="_blank" rel="noopener">ONU Brasil — Objetivos de Desenvolvimento Sustentável</a>.</div>
+ </div>
+</section>
+
+<section id="normas" class="process">
+ <div class="container">
+  <div class="section-head center"><span class="kicker">Referências técnicas</span><h2>Normas ABNT relacionadas ao projeto.</h2><p>As normas ajudam a orientar procedimentos, materiais e ensaios. A equipe utiliza essas referências como parte da organização técnica do projeto.</p></div>
+  <div class="abnt-grid">
+   <article class="norm"><strong>NBR 9781</strong><h3>Peças de concreto para pavimentação</h3><p>Referência diretamente relacionada às peças de concreto para pavimentação e aos requisitos e métodos de avaliação aplicáveis.</p></article>
+   <article class="norm"><strong>NBR 5738</strong><h3>Moldagem e cura</h3><p>Relacionada aos procedimentos de moldagem e cura de corpos de prova de concreto, servindo de referência para essa etapa experimental.</p></article>
+   <article class="norm"><strong>NBR 5739</strong><h3>Compressão</h3><p>Relacionada ao ensaio de resistência à compressão de corpos de prova de concreto, importante para a avaliação mecânica.</p></article>
+   <article class="norm"><strong>NBR 7211</strong><h3>Agregados para concreto</h3><p>Estabelece requisitos para agregados destinados ao concreto e ajuda na análise dos materiais utilizados nas misturas.</p></article>
+  </div>
+  <div class="quote">📐 <strong>Nota:</strong> as normas são documentos técnicos da ABNT e devem ser consultadas em suas edições oficiais. O site apresenta apenas a finalidade de cada referência, sem reproduzir o conteúdo integral das normas.</div>
+ </div>
+</section>
+
+<section id="tintura">
+ <div class="container">
+  <div class="section-head center"><span class="kicker">Outra investigação da equipe</span><h2>Tintura de cajueiro roxo.</h2><p>Uma proposta experimental que aproxima conhecimento tradicional, pesquisa escolar e valorização da biodiversidade regional.</p></div>
+  <div class="tintura-grid">
+   <figure><img class="feature-img" src="1000727650.jpg" alt="Registro visual da investigação sobre cajueiro roxo"><figcaption class="caption">Registro visual da investigação realizada pelos alunos.</figcaption></figure>
+   <div class="tintura-card"><h3>Conhecimento tradicional encontrando a ciência</h3><p>A equipe também investigou uma preparação experimental relacionada ao cajueiro roxo (<em>Anacardium occidentale</em>), a partir de conhecimentos tradicionais e de estudos científicos sobre compostos presentes na casca.</p><br><p>Pesquisas experimentais investigam atividades biológicas de extratos do cajueiro, incluindo resultados relacionados à resposta inflamatória e a modelos de cicatrização. Porém, esses estudos não são suficientes para comprovar que a preparação desenvolvida pelos alunos tenha eficácia terapêutica em pessoas.</p><div class="warning"><strong>Informação importante:</strong> esta é uma investigação escolar e não um medicamento. O site não apresenta a preparação como tratamento comprovado e não recomenda sua aplicação em feridas ou problemas de saúde. A segurança e a eficácia de preparações desse tipo precisam de avaliação científica adequada.</div></div>
   </div>
  </div>
 </section>
@@ -185,19 +211,30 @@ footer{padding:40px 0;background:#0c2419;color:#a9bdb2}.footer-grid{display:flex
 <section id="parvito" class="process">
  <div class="container parvito">
   <div class="parvito-art"><div class="bubble">“E vamos à minha classificação!”</div><div class="bot">🤖</div></div>
-  <div><span class="kicker">Nosso personagem</span><h2>Parvito</h2><p>O Parvito acompanha o projeto e ajuda a apresentar a ciência de um jeito mais próximo e fácil de entender.</p><p style="margin-top:14px">Ele representa a parte criativa do CajuPaver, enquanto a equipe coloca a mão na massa, pesquisa, testa e aprende com cada etapa.</p><div class="buttons"><a class="btn btn-primary" href="#galeria">Ver registros ↓</a></div></div>
+  <div><span class="kicker">Nosso personagem</span><h2>Parvito — a identidade do projeto.</h2><p>Parvito é a identidade do nosso projeto. Ele acompanha nossa jornada e ajuda a apresentar a ciência, os testes e as ideias do Pavers Sustentáveis de um jeito simples e próximo.</p><p style="margin-top:14px">Ele representa nossa criatividade enquanto a equipe coloca a mão na massa, pesquisa, testa e aprende com cada etapa.</p><div class="buttons"><a class="btn btn-primary" href="#galeria">Ver registros ↓</a></div></div>
  </div>
 </section>
 
 <section id="galeria">
  <div class="container">
-  <div class="section-head center"><span class="kicker">Registros</span><h2>Galeria do projeto</h2><p>Espaços preparados para receber as fotos reais dos testes, protótipos e momentos da equipe.</p></div>
+  <div class="section-head center"><span class="kicker">Registros</span><h2>Galeria do projeto.</h2><p>Algumas imagens já foram adicionadas. Os demais registros poderão ser incluídos conforme a equipe reunir novos materiais.</p></div>
   <div class="gallery">
-   <div class="photo">📸<br>Foto dos protótipos</div>
-   <div class="photo">🧪<br>Ensaios</div>
-   <div class="photo">🧱<br>Produção</div>
-   <div class="photo">👥<br>Equipe</div>
-   <div class="photo">🏫<br>Espaço da escola</div>
+   <div class="photo"><img src="1000727625.jpg" alt="Protótipos dos pavers sustentáveis"></div>
+   <div class="photo">🧪<br>Ensaios</div><div class="photo">🧱<br>Produção</div><div class="photo">👥<br>Equipe</div><div class="photo">🏫<br>Espaço da escola</div>
+  </div>
+ </div>
+</section>
+
+<section id="explorar" class="explore">
+ <div class="container">
+  <div class="section-head center"><span class="kicker">Quer conhecer mais?</span><h2>Continue navegando.</h2><p>Descubra outros detalhes da nossa pesquisa, dos nossos testes e da nossa jornada.</p></div>
+  <div class="explore-grid">
+   <a href="#lei">⚖️ Projeto de Lei<span>Conheça a proposta de valorização da cadeia da castanha.</span></a>
+   <a href="#beneficios">🌱 Benefícios do paver<span>Veja os benefícios ambientais, econômicos, sociais e técnicos.</span></a>
+   <a href="#ods">🌍 ODS da ONU<span>Entenda a relação do projeto com os ODS 9, 11, 12 e 13.</span></a>
+   <a href="#normas">📐 Normas ABNT<span>Conheça as referências técnicas utilizadas no projeto.</span></a>
+   <a href="#tintura">🌿 Tintura de cajueiro roxo<span>Conheça outra investigação realizada pela equipe.</span></a>
+   <a href="#galeria">📸 Galeria<span>Veja os registros do desenvolvimento do projeto.</span></a>
   </div>
  </div>
 </section>
@@ -205,8 +242,8 @@ footer{padding:40px 0;background:#0c2419;color:#a9bdb2}.footer-grid{display:flex
 <section>
  <div class="container">
   <div class="contact">
-   <div><span class="kicker" style="color:#b7e4c5">CajuPaver</span><h2>Juntos construímos um futuro mais verde.</h2><p>Um projeto feito de pesquisa, colaboração, criatividade e muita mão na massa.</p></div>
-   <a class="btn" href="#inicio">Voltar ao início ↑</a>
+   <div><span class="kicker" style="color:#b7e4c5">Pavers Sustentáveis</span><h2>Gostou da nossa proposta?</h2><p>Parvito: ajude nossa ideia a chegar mais longe! Compartilhe o projeto e faça parte dessa transformação pela valorização da castanha e por um ambiente mais saudável.</p></div>
+   <button class="btn" id="shareBtn" type="button">↗ Compartilhar projeto</button>
   </div>
  </div>
 </section>
@@ -214,9 +251,21 @@ footer{padding:40px 0;background:#0c2419;color:#a9bdb2}.footer-grid{display:flex
 
 <footer>
  <div class="container">
-  <div class="footer-grid"><div class="footer-brand">🌱 CajuPaver</div><div>Pavers sustentáveis a partir da casca da castanha de caju.</div></div>
+  <div class="footer-grid"><div class="footer-brand">🌱 Pavers Sustentáveis</div><div>Pavers sustentáveis a partir da casca da castanha de caju.</div></div>
   <div class="copyright">Projeto escolar de ciência, inovação e sustentabilidade • 2026</div>
  </div>
 </footer>
+
+<script>
+const shareBtn=document.getElementById('shareBtn');
+shareBtn.addEventListener('click',async()=>{
+ const data={title:'Pavers Sustentáveis',text:'Conheça o projeto Pavers Sustentáveis, que investiga o reaproveitamento da casca da castanha de caju na produção de pavers.',url:window.location.href};
+ try{
+  if(navigator.share){await navigator.share(data);}
+  else if(navigator.clipboard){await navigator.clipboard.writeText(window.location.href);shareBtn.textContent='✓ Link copiado';setTimeout(()=>shareBtn.textContent='↗ Compartilhar projeto',2200);}
+  else{window.prompt('Copie o link do projeto:',window.location.href);}
+ }catch(e){}
+});
+</script>
 </body>
 </html>
