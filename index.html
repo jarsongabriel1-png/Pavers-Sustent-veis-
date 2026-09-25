@@ -101,12 +101,12 @@ footer{padding:40px 0;background:#0c2419;color:#a9bdb2}.footer-grid{display:flex
 .back-home{margin-top:25px}
 .law-img{width:min(760px,100%);display:block;margin:0 auto 30px;border-radius:24px;border:1px solid var(--line);box-shadow:var(--shadow)}
 </style></head><body><header><div class="container nav"><a class="brand" href="index.html"><span class="brand-mark">🌱</span>Pavers <em>Sustentáveis</em></a></div></header><nav class="tabbar" aria-label="Abas de navegação"><div class="container tabbar-inner">
-<a class="tab" href="beneficios.html">Benefícios</a><a class="tab" href="ods.html">ODS</a><a class="tab" href="abnt.html">Normas ABNT</a><a class="tab" href="projeto-de-lei.html">Projeto de Lei</a><a class="tab" href="tintura.html">Tintura de Cajueiro Roxo</a><a class="tab" href="galeria.html">Galeria</a>
+<a class="tab" href="index.html">Início</a><a class="tab" href="beneficios.html">Benefícios</a><a class="tab" href="ods.html">ODS</a><a class="tab" href="abnt.html">Normas ABNT</a><a class="tab" href="projeto-de-lei.html">Projeto de Lei</a><a class="tab" href="tintura.html">Tintura de Cajueiro Roxo</a><a class="tab" href="galeria.html">Galeria</a>
 </div></nav><main id="inicio"><section class="hero">
 <div class="container hero-grid">
 <div class="reveal">
 <span class="eyebrow">♻️ Ciência • Inovação • Sustentabilidade</span>
-<h1>Transformar um <span>resíduo</span> em possibilidade.</h1>
+<h1>Seja bem-vindo ao nosso projeto <span>Pavers Sustentáveis</span></h1>
 <p class="hero-copy">Seja bem-vindo ao nosso projeto <strong>Pavers Sustentáveis</strong>. Investigamos o aproveitamento da casca da castanha de caju na produção de pavers, unindo pesquisa, experimentação e uma solução pensada para nossa comunidade.</p>
 <div class="buttons"><a class="btn btn-primary" href="#ideia">Conheça o projeto ↓</a><a class="btn btn-secondary" href="#processo">Ver o processo</a></div>
 </div>
@@ -171,4 +171,28 @@ footer{padding:40px 0;background:#0c2419;color:#a9bdb2}.footer-grid{display:flex
 <div class="parvito-art"><div class="bubble">“E vamos à minha classificação!”</div><div class="bot">🤖</div></div>
 <div><span class="kicker">Identidade do projeto</span><h2>Parvito</h2><p>O Parvito representa a identidade do projeto e acompanha a equipe na apresentação da pesquisa, dos testes e dos aprendizados.</p><p style="margin-top:14px">Ele ajuda a aproximar a ciência do público sem tirar o foco do trabalho experimental desenvolvido pela equipe.</p></div>
 </div>
-</section><section><div class="container"><div class="contact"><div><span class="kicker" style="color:#b7e4c5">Pavers Sustentáveis</span><h2>Juntos construímos um futuro mais verde.</h2><p>Gostou da nossa proposta? Ajude nossa ideia a chegar mais longe e compartilhe o projeto.</p></div><a class="btn" href="#inicio">Voltar ao início ↑</a></div></div></section></main><footer><div class="container"><div class="footer-grid"><div class="footer-brand">🌱 Pavers Sustentáveis</div><div>Projeto escolar de ciência, inovação e sustentabilidade.</div></div><div class="copyright">Projeto escolar • 2026</div></div></footer></body></html>
+</section><section><div class="container"><div class="contact"><div><span class="kicker" style="color:#b7e4c5">Pavers Sustentáveis</span><h2>Juntos construímos um futuro mais verde.</h2><p>Gostou da nossa proposta? Ajude nossa ideia a chegar mais longe e compartilhe o projeto.</p></div><div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end"><button class="btn" id="shareProject" type="button">↗ Compartilhar projeto</button><a class="btn" href="#inicio">Voltar ao início ↑</a></div></div></div></section></main><footer><div class="container"><div class="footer-grid"><div class="footer-brand">🌱 Pavers Sustentáveis</div><div>Projeto escolar de ciência, inovação e sustentabilidade.</div></div><div class="copyright">Projeto escolar • 2026</div></div></footer><script>
+const shareButton = document.getElementById('shareProject');
+if (shareButton) {
+  shareButton.addEventListener('click', async () => {
+    const shareData = {
+      title: 'Pavers Sustentáveis',
+      text: 'Juntos construímos um futuro mais verde. Conheça o projeto Pavers Sustentáveis!',
+      url: window.location.href
+    };
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else if (navigator.clipboard) {
+        await navigator.clipboard.writeText(window.location.href);
+        shareButton.textContent = '✓ Link copiado!';
+        setTimeout(() => shareButton.textContent = '↗ Compartilhar projeto', 2200);
+      } else {
+        window.prompt('Copie o link do projeto:', window.location.href);
+      }
+    } catch (error) {
+      if (error.name !== 'AbortError') console.error(error);
+    }
+  });
+}
+</script></body></html>
