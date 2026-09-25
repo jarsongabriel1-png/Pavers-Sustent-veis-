@@ -63,8 +63,7 @@ table{width:100%;border-collapse:collapse}th,td{padding:15px 16px;text-align:lef
 .quote{margin-top:25px;background:#fff;border-left:4px solid var(--gold);padding:22px 25px;border-radius:0 18px 18px 0;color:#52645b}
 .parvito{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:center}
 .parvito-art{min-height:390px;border-radius:32px;background:linear-gradient(145deg,#e2f2e6,#fff5db);display:grid;place-items:center;border:1px solid var(--line);position:relative;overflow:hidden}
-.bot{width:190px;height:190px;border-radius:45px;background:#fff;border:7px solid var(--green);box-shadow:0 22px 45px rgba(16,45,32,.15);display:grid;place-items:center;font-size:5rem;position:relative}
-.bot:before,.bot:after{content:"";position:absolute;top:-32px;width:7px;height:35px;background:var(--green);border-radius:8px}.bot:before{left:42px}.bot:after{right:42px}
+.bot{width:100%;max-width:360px;max-height:330px;object-fit:contain;display:block;position:relative}
 .bubble{position:absolute;top:28px;right:25px;background:#fff;padding:11px 14px;border-radius:15px;box-shadow:0 8px 25px #0001;font-weight:800;color:var(--green);font-size:.8rem}
 .timeline{display:grid;gap:12px;margin-top:25px}.time{display:grid;grid-template-columns:95px 1fr;gap:15px;align-items:start}.time b{color:var(--green)}.time div{border-bottom:1px solid var(--line);padding-bottom:12px}
 .gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:180px;gap:14px}.photo{border-radius:20px;background:linear-gradient(135deg,#dfe9e1,#c5d3c9);display:grid;place-items:center;color:#527064;font-weight:800;border:1px solid var(--line);text-align:center;padding:20px}.photo:first-child{grid-row:span 2}
@@ -168,7 +167,7 @@ footer{padding:40px 0;background:#0c2419;color:#a9bdb2}.footer-grid{display:flex
 </div>
 </section><section class="process" id="parvito">
 <div class="container parvito">
-<div class="parvito-art"><div class="bubble">“E vamos à minha classificação!”</div><div class="bot">🤖</div></div>
+<div class="parvito-art"><div class="bubble">“E vamos à minha classificação!”</div><img class="bot" src="parvito.jpg" alt="Parvito, mascote do projeto Pavers Sustentáveis"></div>
 <div><span class="kicker">Identidade do projeto</span><h2>Parvito</h2><p>O Parvito representa a identidade do projeto e acompanha a equipe na apresentação da pesquisa, dos testes e dos aprendizados.</p><p style="margin-top:14px">Ele ajuda a aproximar a ciência do público sem tirar o foco do trabalho experimental desenvolvido pela equipe.</p></div>
 </div>
 </section><section><div class="container"><div class="contact"><div><span class="kicker" style="color:#b7e4c5">Pavers Sustentáveis</span><h2>Juntos construímos um futuro mais verde.</h2><p>Gostou da nossa proposta? Ajude nossa ideia a chegar mais longe e compartilhe o projeto.</p></div><div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end"><button class="btn" id="shareProject" type="button">↗ Compartilhar projeto</button><a class="btn" href="#inicio">Voltar ao início ↑</a></div></div></div></section></main><footer><div class="container"><div class="footer-grid"><div class="footer-brand">🌱 Pavers Sustentáveis</div><div>Projeto escolar de ciência, inovação e sustentabilidade.</div></div><div class="copyright">Projeto escolar • 2026</div></div></footer><script>
